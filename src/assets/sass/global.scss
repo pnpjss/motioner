@@ -1,0 +1,33 @@
+* {
+	font-family: "Lato", sans-serif;
+	margin: 0;
+}
+.App {
+	max-width: 550px;
+	width: 100vw;
+}
+h3 {
+	font-weight: 700;
+}
+p {
+	font-size: 16px;
+	font-weight: 300;
+}
+a {
+	font-size: 14px;
+	color: rgb(85, 85, 85);
+}
+i {
+	font-size: 14px;
+}
+article {
+	display: flex;
+	flex-direction: column;
+	border-bottom: 2px solid #252525;
+	padding: 1rem 0.5rem 0.5rem 1rem;
+	color: black;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+	> * {
+		margin-bottom: 0.3rem;
+	}
+}

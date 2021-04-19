@@ -1,0 +1,33 @@
+@import "../../assets/sass/global.scss";
+
+.header {
+	display: flex;
+	flex-direction: column;
+	height: 5rem;
+	align-items: center;
+	background-color: #252525;
+	color: white;
+	padding: 0rem 0.5rem 0rem 0.5rem;
+	h1 {
+		line-height: 54px;
+		font-weight: 100;
+	}
+	> * {
+		display: flex;
+	}
+	ul {
+		padding: 0;
+	}
+	li {
+		display: inline;
+
+		a {
+			line-height: 25px;
+			font-size: 18px;
+			color: rgb(231, 174, 109);
+			font-weight: bold;
+			text-decoration: none;
+		}
+		padding-left: 1rem;
+	}
+}
