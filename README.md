@@ -1,3 +1,9 @@
+
+# Direct democracy
+
+Currently this idea is a simple api viewer however, the ideas are endless. The point of this project is to make the world great again through direct democracy. Why choose people to choose for you? Thats a joke and therefore this is not. No xd's. This just started though so dont expect much for another snart, strax or stund.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
