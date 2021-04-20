@@ -12,7 +12,7 @@ const Header = () => (
 				<a href="/skrivelser">skrivelser</a>
 			</li>
 			<li>
-				<a href="/motioner">motioner</a>
+				<a href="/partier/Socialdemokraterna">partier</a>
 			</li>
 		</ul>
 	</div>

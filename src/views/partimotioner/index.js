@@ -1,14 +1,12 @@
 import React from "react";
-import FullDocuments from "../../assets/api/index.js";
-// import { Router, Link } from "@reach/router";
-import "./propositioner.scss";
+import Motioner from "../../assets/api/motioner.js";
+import { Router, Link } from "@reach/router";
+import "./partimotioner.scss";
 
-const Propositioner = (props) => {
-	const docs = FullDocuments();
+const partimotioner = (props) => {
+	const docs = motioner();
 
-	const propositioner = docs.filter(
-		(doc) => doc.dokumentnamn === "Proposition"
-	);
+	const motioner = docs.filter((doc) => doc.dokumentnamn === "Proposition");
 	console.log(propositioner[0]);
 	return (
 		<div className="views propositioner">

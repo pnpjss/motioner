@@ -1,8 +1,8 @@
 import React from "react";
-const url =
-	"https://data.riksdagen.se/dokumentlista/?sok=&doktyp=&rm=&from=&tom=&ts=&bet=&tempbet=&nr=&org=&iid=&avd=&webbtv=&talare=&exakt=&planering=&facets=&sort=rel&sortorder=desc&rapport=inkomnaforslag&utformat=json&a=s#soktraff";
 
-const FullDocuments = () => {
+const GetDocuments = (props) => {
+	let url = props;
+
 	const [docs, setDocs] = React.useState([]);
 	const [loading, setLoading] = React.useState(true);
 	console.log(loading);
@@ -13,8 +13,7 @@ const FullDocuments = () => {
 		setDocs(item);
 		setLoading(false);
 	}, []);
-
+	console.log(docs);
 	return docs;
 };
-
-export default FullDocuments;
+export default GetDocuments;

@@ -1,14 +1,14 @@
 import React from "react";
-
-import { Router, Link } from "@reach/router";
+// Router, Link
+import { Router } from "@reach/router";
 import Home from "./views/home/index.js";
 import Propositioner from "./views/propositioner/index.js";
 import Skrivelser from "./views/skrivelser/index.js";
+import Partier from "./views/partier/index.js";
 // Views
 
 // components
 import Header from "./components/header/index.js";
-const name = "lucas";
 
 function App() {
 	return (
@@ -17,8 +17,10 @@ function App() {
 			<Router>
 				<Home path="/" />
 				<Home path="/home/:parti" />
-				<Propositioner path="/propositioner" name="lucas" />
+				<Propositioner path="/propositioner" />
 				<Skrivelser path="/skrivelser" />
+
+				<Partier path="partier/:parti"></Partier>
 			</Router>
 		</div>
 	);
