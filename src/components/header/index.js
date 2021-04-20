@@ -3,7 +3,8 @@ import "./header.scss";
 
 const Header = () => (
 	<div className="header">
-		<h1>RÖSTEN</h1>
+		<h1>DIREKT DEMOKRATI v1</h1>
+
 		<ul>
 			<li>
 				<a href="/propositioner">propositioner</a>

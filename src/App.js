@@ -1,10 +1,10 @@
 import React from "react";
-// Router, Link
+//
 import { Router } from "@reach/router";
 import Home from "./views/home/index.js";
 import Propositioner from "./views/propositioner/index.js";
 import Skrivelser from "./views/skrivelser/index.js";
-import Partier from "./views/partier/index.js";
+import Partier from "./views/motioner/index.js";
 // Views
 
 // components
