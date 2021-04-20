@@ -7,7 +7,7 @@ import { Link } from "@reach/router";
 const Buttons = (props) => {
 	return (
 		<Link to={"/partier/" + props}>
-			<div className="button-body" key={props.id}>
+			<div className="button-body">
 				<button>{props}</button>
 			</div>
 		</Link>

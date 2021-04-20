@@ -4,6 +4,8 @@ import "./propositions.scss";
 
 const Propositions = (props) => {
 	const docs = FullDocuments();
+	// Fetch only the propositions documents from the api/ find another way to configure the api
+	// This is ugly
 	const propositions = docs.filter((doc) => doc.dokumentnamn === "Proposition");
 
 	return (
