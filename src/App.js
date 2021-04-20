@@ -2,9 +2,9 @@ import React from "react";
 //
 import { Router } from "@reach/router";
 import Home from "./views/home/index.js";
-import Propositioner from "./views/propositioner/index.js";
-import Skrivelser from "./views/skrivelser/index.js";
-import Partier from "./views/motioner/index.js";
+import Propositions from "./views/propositions/index.js";
+import Petitions from "./views/petitions/index.js";
+import Parties from "./views/motioner/index.js";
 // Views
 
 // components
@@ -16,11 +16,9 @@ function App() {
 			<Header></Header>
 			<Router>
 				<Home path="/" />
-				<Home path="/home/:parti" />
-				<Propositioner path="/propositioner" />
-				<Skrivelser path="/skrivelser" />
-
-				<Partier path="partier/:parti"></Partier>
+				<Propositions path="/propositioner" />
+				<Petitions path="/skrivelser" />
+				<Parties path="partier/:party"></Parties>
 			</Router>
 		</div>
 	);

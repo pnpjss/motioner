@@ -1,40 +1,32 @@
 import React from "react";
-import { Router, Link, useParams } from "@reach/router";
-import "./partier.scss";
+import "./parties.scss";
 import Buttons from "../../components/buttons/index.js";
 
-// Import components buttons
-// Let user choose which parti they want to show by pressing a button
-// Button redirects user to /Partier/x
-// x Is interpreted as prop.party
-// use prop.party to fetch the correct api list of motions
-// return a display of the motions
-
-const partier = [
+const parties = [
 	{
 		title: "Socialdemokraterna",
-		hemsida: "https://www.socialdemokraterna.se/",
+		homepage: "https://www.socialdemokraterna.se/",
 		motionUrl:
 			"https://data.riksdagen.se/dokumentlista/?sok=&doktyp=mot&rm=&from=&tom=&ts=&bet=&tempbet=&nr=&org=&iid=&parti=S&avd=&webbtv=&talare=&exakt=&planering=&facets=&sort=rel&sortorder=desc&rapport=&utformat=json&a=s#soktraff",
 	},
 	{
 		title: "Moderaterna",
-		hemsida: "",
+		homepage: "",
 		motionUrl:
 			"https://data.riksdagen.se/dokumentlista/?sok=&doktyp=&rm=&from=&tom=&ts=&bet=&tempbet=&nr=&org=&iid=&parti=M&avd=&webbtv=&talare=&exakt=&planering=&facets=&sort=rel&sortorder=desc&rapport=&utformat=json&a=s#soktraff",
 	},
 	{
 		title: "Vänsterpartiet",
-		hemsida: "www.vänsterpartiet.se",
+		homepage: "www.vänsterpartiet.se",
 		motionUrl:
 			"https://data.riksdagen.se/dokumentlista/?sok=&doktyp=mot&rm=&from=&tom=&ts=&bet=&tempbet=&nr=&org=&iid=&parti=V&avd=&webbtv=&talare=&exakt=&planering=&facets=&sort=rel&sortorder=desc&rapport=&utformat=json&a=s#soktraff",
 	},
 ];
 
-const Partier = (props) => {
-	const parti = props.parti;
-	const partiDokument = partier.filter((item) => item.title === parti);
-	const url = partiDokument.map((item) => {
+const Parties = (props) => {
+	const partyName = props.party;
+	const partyDocs = parties.filter((item) => item.title === partyName);
+	const url = partyDocs.map((item) => {
 		return item.motionUrl;
 	});
 
@@ -47,25 +39,30 @@ const Partier = (props) => {
 		const item = data.dokumentlista.dokument;
 		setDocs(item);
 		setLoading(false);
-	}, [props.parti]);
+	}, [props.party]);
 
 	return (
 		<div className="motions">
+			{
+				// This shows an error, figure out how to make Buttons() retrieve an id for every item and key it inside buttons-body div
+				// Maybe send the entire item, though it seems unnecessary(?)
+			}
 			<div className="party-buttons">
-				{partier.map((item) => {
+				{parties.map((item) => {
 					return Buttons(item.title);
 				})}
 			</div>
 
 			{docs.map((item) => {
 				return (
-					<article className="motioner">
+					<article key={item.titel}>
 						<h3>{item.titel}</h3>
 						<p>{item.notis}</p>
+						<i>{item.datum}</i>
 					</article>
 				);
 			})}
 		</div>
 	);
 };
-export default Partier;
+export default Parties;

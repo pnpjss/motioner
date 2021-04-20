@@ -3,4 +3,12 @@
 h2 {
 	padding-left: 2rem;
 	font-weight: bold;
+	margin-bottom: 1rem;
+}
+.home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 15rem;
 }
